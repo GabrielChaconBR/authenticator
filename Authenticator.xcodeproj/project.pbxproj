@@ -16,6 +16,7 @@
 		081C748F2BB7178D006E9E8F /* AuthenticatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081C748E2BB7178D006E9E8F /* AuthenticatorTests.swift */; };
 		081C74992BB7178D006E9E8F /* AuthenticatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081C74982BB7178D006E9E8F /* AuthenticatorUITests.swift */; };
 		081C749B2BB7178D006E9E8F /* AuthenticatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081C749A2BB7178D006E9E8F /* AuthenticatorUITestsLaunchTests.swift */; };
+		081C74A82BB72C5F006E9E8F /* LoginUnificadoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081C74A72BB72C5F006E9E8F /* LoginUnificadoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		081C74942BB7178D006E9E8F /* AuthenticatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthenticatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		081C74982BB7178D006E9E8F /* AuthenticatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatorUITests.swift; sourceTree = "<group>"; };
 		081C749A2BB7178D006E9E8F /* AuthenticatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		081C74A72BB72C5F006E9E8F /* LoginUnificadoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUnificadoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				081C74812BB7178D006E9E8F /* Persistence.swift */,
 				081C74832BB7178D006E9E8F /* Authenticator.xcdatamodeld */,
 				081C747E2BB7178D006E9E8F /* Preview Content */,
+				081C74A72BB72C5F006E9E8F /* LoginUnificadoViewModel.swift */,
 			);
 			path = Authenticator;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				081C74822BB7178D006E9E8F /* Persistence.swift in Sources */,
+				081C74A82BB72C5F006E9E8F /* LoginUnificadoViewModel.swift in Sources */,
 				081C74852BB7178D006E9E8F /* Authenticator.xcdatamodeld in Sources */,
 				081C747B2BB7178A006E9E8F /* ContentView.swift in Sources */,
 				081C74792BB7178A006E9E8F /* AuthenticatorApp.swift in Sources */,
