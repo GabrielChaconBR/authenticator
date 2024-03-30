@@ -8,21 +8,35 @@
 import Foundation
 import Combine
 
-class LoginUnificadoViewModel: ObservableObject {
+protocol loginUnificadoViewModelProtocol {
+    
+    var agency: String { get }
+    var account: String { get }
+    var password: String { get }
+    var isPreLoginDone: Bool { get }
+    var showEnterButton: Bool { get }
+    var showEsqueciSenhaButton: Bool { get }
+    
+    func preLogin()
+    func login()
+    func forgotPassword()
+}
+
+class LoginUnificadoViewModel: ObservableObject, loginUnificadoViewModelProtocol {
     
     @Published var agency: String = String()
     @Published var account: String = String()
     @Published var password: String = String()
-    @Published var isPreLoginDone = false
-    @Published var showLoginButton = false
-    @Published var showEsqueciSenhaButton = true
+    @Published var isPreLoginDone: Bool = false
+    @Published var showEnterButton: Bool = true
+    @Published var showEsqueciSenhaButton: Bool = true
     
     private var cancellables = Set<AnyCancellable>()
     
     init() {
         $password
             .map { $0.count > 5 }
-            .assign(to: &$showLoginButton)
+            .assign(to: &$showEnterButton)
         
         $account
             .map { $0.count == 5 }
@@ -40,6 +54,14 @@ class LoginUnificadoViewModel: ObservableObject {
     
     func preLogin() {
         // Implementar a lógica de pré-login aqui, altera `isPreLoginDone`
+    }
+    
+    func login() {
+        
+    }
+    
+    func forgotPassword() {
+        
     }
 }
 

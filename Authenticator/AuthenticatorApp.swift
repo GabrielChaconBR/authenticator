@@ -13,7 +13,7 @@ struct AuthenticatorApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginUnificadoView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
