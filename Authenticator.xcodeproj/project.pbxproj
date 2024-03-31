@@ -17,10 +17,13 @@
 		081C74992BB7178D006E9E8F /* AuthenticatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081C74982BB7178D006E9E8F /* AuthenticatorUITests.swift */; };
 		081C749B2BB7178D006E9E8F /* AuthenticatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081C749A2BB7178D006E9E8F /* AuthenticatorUITestsLaunchTests.swift */; };
 		081C74A82BB72C5F006E9E8F /* LoginUnificadoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081C74A72BB72C5F006E9E8F /* LoginUnificadoViewModel.swift */; };
+		08BC194A2BB9C34700F147E8 /* LoginUnificadoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BC19492BB9C34700F147E8 /* LoginUnificadoProtocol.swift */; };
+		08BC194E2BB9EE8A00F147E8 /* AuthenticatorUseCase in Resources */ = {isa = PBXBuildFile; fileRef = 08BC194D2BB9EE8A00F147E8 /* AuthenticatorUseCase */; };
 		08CC2E852BB850A1002553A7 /* MDTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CC2E842BB850A1002553A7 /* MDTextFieldView.swift */; };
 		08CC2E892BB88BD9002553A7 /* ValidateLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CC2E882BB88BD9002553A7 /* ValidateLoadingView.swift */; };
 		08CC2E8B2BB894D3002553A7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CC2E8A2BB894D3002553A7 /* LoadingView.swift */; };
 		08CC2E8D2BB8A3FC002553A7 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CC2E8C2BB8A3FB002553A7 /* ButtonView.swift */; };
+		08CC2E902BB8DFFD002553A7 /* MaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CC2E8F2BB8DFFD002553A7 /* MaskProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,10 +57,13 @@
 		081C74982BB7178D006E9E8F /* AuthenticatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatorUITests.swift; sourceTree = "<group>"; };
 		081C749A2BB7178D006E9E8F /* AuthenticatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		081C74A72BB72C5F006E9E8F /* LoginUnificadoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUnificadoViewModel.swift; sourceTree = "<group>"; };
+		08BC19492BB9C34700F147E8 /* LoginUnificadoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUnificadoProtocol.swift; sourceTree = "<group>"; };
+		08BC194D2BB9EE8A00F147E8 /* AuthenticatorUseCase */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AuthenticatorUseCase; sourceTree = "<group>"; };
 		08CC2E842BB850A1002553A7 /* MDTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDTextFieldView.swift; sourceTree = "<group>"; };
 		08CC2E882BB88BD9002553A7 /* ValidateLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateLoadingView.swift; sourceTree = "<group>"; };
 		08CC2E8A2BB894D3002553A7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		08CC2E8C2BB8A3FB002553A7 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		08CC2E8F2BB8DFFD002553A7 /* MaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,8 @@
 		081C74772BB7178A006E9E8F /* Authenticator */ = {
 			isa = PBXGroup;
 			children = (
+				08BC194D2BB9EE8A00F147E8 /* AuthenticatorUseCase */,
+				08CC2E8E2BB8DFE7002553A7 /* Util */,
 				08CC2E832BB85083002553A7 /* Components */,
 				081C74782BB7178A006E9E8F /* AuthenticatorApp.swift */,
 				081C74A72BB72C5F006E9E8F /* LoginUnificadoViewModel.swift */,
@@ -116,6 +124,7 @@
 				081C74812BB7178D006E9E8F /* Persistence.swift */,
 				081C74832BB7178D006E9E8F /* Authenticator.xcdatamodeld */,
 				081C747E2BB7178D006E9E8F /* Preview Content */,
+				08BC19492BB9C34700F147E8 /* LoginUnificadoProtocol.swift */,
 			);
 			path = Authenticator;
 			sourceTree = "<group>";
@@ -154,6 +163,14 @@
 				08CC2E8C2BB8A3FB002553A7 /* ButtonView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		08CC2E8E2BB8DFE7002553A7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				08CC2E8F2BB8DFFD002553A7 /* MaskProtocol.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				081C74802BB7178D006E9E8F /* Preview Assets.xcassets in Resources */,
+				08BC194E2BB9EE8A00F147E8 /* AuthenticatorUseCase in Resources */,
 				081C747D2BB7178D006E9E8F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,10 +306,12 @@
 			files = (
 				08CC2E852BB850A1002553A7 /* MDTextFieldView.swift in Sources */,
 				08CC2E8D2BB8A3FC002553A7 /* ButtonView.swift in Sources */,
+				08BC194A2BB9C34700F147E8 /* LoginUnificadoProtocol.swift in Sources */,
 				081C74822BB7178D006E9E8F /* Persistence.swift in Sources */,
 				081C74A82BB72C5F006E9E8F /* LoginUnificadoViewModel.swift in Sources */,
 				081C74852BB7178D006E9E8F /* Authenticator.xcdatamodeld in Sources */,
 				081C747B2BB7178A006E9E8F /* LoginUnificadoView.swift in Sources */,
+				08CC2E902BB8DFFD002553A7 /* MaskProtocol.swift in Sources */,
 				08CC2E8B2BB894D3002553A7 /* LoadingView.swift in Sources */,
 				081C74792BB7178A006E9E8F /* AuthenticatorApp.swift in Sources */,
 				08CC2E892BB88BD9002553A7 /* ValidateLoadingView.swift in Sources */,

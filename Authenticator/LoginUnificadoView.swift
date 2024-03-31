@@ -7,31 +7,49 @@
 
 import SwiftUI
 
+enum FocusField {
+    case agency
+    case currentAccount
+}
+
+struct LoginUnificadoViewEntity {
+    let logo: String
+    let iconTextFieldPrimary: String
+    let iconTextFieldSecundary: String
+    let agencyTitle: String
+    let accountTitle: String
+    let enterTitle: String
+    let passwordTitle: String
+    let forgotPasswordTitle: String
+    let validateTitle: String
+    let agencyMask: DataMask
+    let accountMask: DataMask
+}
+
 struct LoginUnificadoView: View {
-    
-    @ObservedObject var viewModel = LoginUnificadoViewModel()
     
     private enum Metrics {
         static let heightLogo: CGFloat = 35
         static let widthLogo: CGFloat = 35
         static let paddingTopLogo: CGFloat = 16
         static let paddingLeadingLogo: CGFloat = 16
+        static let padding: CGFloat = 64
     }
     
-    var logo: String = "logo"
-    var blackArrow: String = "arrow_right_gray"
-    var whiteArrow: String = "arrow_right_white"
-    var agencyTitle: String = "Agência"
-    var accountTitle: String = "Conta Corrente"
-    var enterTitle: String = "Entrar"
-    var passwordTitle: String = "Senha Eletrônica"
-    var forgotPasswordTitle: String = "Esqueci a Senha"
-    var validateTitle: String = "Validando..."
+    @ObservedObject var viewModel = LoginUnificadoViewModel()
+    //@FocusState private var focusField: FocusField?
+    @FocusState private var focusedField: LoginUnificadoViewModel.FocusState?
+    private let entity: LoginUnificadoViewEntity
+    
+    internal init(viewModel: LoginUnificadoViewModel = LoginUnificadoViewModel(), entity: LoginUnificadoViewEntity) {
+        self.viewModel = viewModel
+        self.entity = entity
+    }
     
     var body: some View {
         VStack {
             HStack {
-                Image(logo)
+                Image(entity.logo)
                     .resizable()
                     .scaledToFit()
                     .frame(width: Metrics.widthLogo, height: Metrics.heightLogo)
@@ -41,47 +59,51 @@ struct LoginUnificadoView: View {
                 Spacer()
             }
             HStack {
-                MDTextFieldView(label: agencyTitle, text: $viewModel.agency)
+                MDTextFieldView(label: entity.agencyTitle, text: $viewModel.agency, mask: entity.agencyMask)
                     .frame(maxWidth: .infinity)
                     .keyboardType(.numberPad)
+                    .focused($focusedField, equals: .agency)
+                    .onTapGesture { viewModel.focusState = .agency }
                 
-                MDTextFieldView(label: accountTitle, text: $viewModel.account)
+                MDTextFieldView(label: entity.accountTitle, text: $viewModel.currentAccount, mask: entity.accountMask)
                     .frame(maxWidth: .infinity)
                     .keyboardType(.numberPad)
+                    .focused($focusedField, equals: .currentAccount)
+                    .onTapGesture { viewModel.focusState = .currentAccount }
             }
             .padding()
             
-            MDTextFieldView(label: passwordTitle, text: $viewModel.password, secure: true)
+            MDTextFieldView(label: entity.passwordTitle, text: $viewModel.password, secure: true)
                 .frame(maxWidth: .infinity)
                 .keyboardType(.numberPad)
                 .padding()
             
-            Spacer() 
+            Spacer()
+            
+            if viewModel.showEnterButton {
+                ButtonView(title: entity.enterTitle, icon: entity.iconTextFieldSecundary,
+                           clickTap: {
+                    viewModel.login()
+                })
+            }
             
             ZStack {
-                if viewModel.showEnterButton {
-                    ButtonView(title: enterTitle, icon: whiteArrow,
-                               clickTap: {
-                        // Chamar método de login
-                    })
-                }
-                
-                ButtonView(title: forgotPasswordTitle, titleColor: .gray, color: .clear, icon: blackArrow,
+                ButtonView(title: entity.forgotPasswordTitle, titleColor: .gray, color: .clear, icon: entity.iconTextFieldPrimary,
                            clickTap: {
-                    // Chamar método de login
+                    viewModel.preLogin()
                 })
                 .disabled(!viewModel.showEsqueciSenhaButton)
                 
                 if viewModel.isPreLoginDone {
-                    ValidateLoadingView(validateTitle: validateTitle)
+                    ValidateLoadingView(validateTitle: entity.validateTitle)
                         .padding(.bottom)
                     
                 }
             }
-        }.padding(.top, 64)
+        }
     }
 }
 
 #Preview {
-    LoginUnificadoView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    LoginUnificadoView(entity: LoginUnificadoViewEntity(logo: "logo", iconTextFieldPrimary: "arrow_right_gray", iconTextFieldSecundary: "arrow_right_white", agencyTitle: "Agência", accountTitle: "Conta Corrente", enterTitle: "Entrar", passwordTitle: "Senha Eletrônica", forgotPasswordTitle: "Esqueci a Senha", validateTitle: "Validando...", agencyMask: DataMask(maskFormat: "####"), accountMask: DataMask(maskFormat: "#####-#"))).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }

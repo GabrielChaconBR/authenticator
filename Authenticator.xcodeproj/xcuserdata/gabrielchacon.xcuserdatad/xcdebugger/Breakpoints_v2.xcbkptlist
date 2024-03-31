@@ -3,4 +3,165 @@
    uuid = "9E86BBED-0540-4A7F-85D6-C516DA02A0FE"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50AA4A50-B75B-4655-9085-2A3AC4251B29"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Authenticator/LoginUnificadoViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "50AA4A50-B75B-4655-9085-2A3AC4251B29 - c14b907209a43f94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.String) -&gt; () in Authenticator.LoginUnificadoViewModel.init() -&gt; Authenticator.LoginUnificadoViewModel"
+                  moduleName = "Authenticator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielchacon/Documents/Projects/Authenticator/Authenticator/LoginUnificadoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "262">
+               </Location>
+               <Location
+                  uuid = "50AA4A50-B75B-4655-9085-2A3AC4251B29 - e09fe3863a1f9595"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (Swift.String) -&gt; () in Authenticator.LoginUnificadoViewModel.init() -&gt; Authenticator.LoginUnificadoViewModel"
+                  moduleName = "Authenticator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielchacon/Documents/Projects/Authenticator/Authenticator/LoginUnificadoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0762D968-7997-4EB3-A47C-680BDC1636AD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Authenticator/LoginUnificadoViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "preLogin()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0762D968-7997-4EB3-A47C-680BDC1636AD - e0d1ffeacdcc5831"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Authenticator.LoginUnificadoViewModel.preLogin() -&gt; ()"
+                  moduleName = "Authenticator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielchacon/Documents/Projects/Authenticator/Authenticator/LoginUnificadoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "0762D968-7997-4EB3-A47C-680BDC1636AD - 705a6f8b7d3a413d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Authenticator.LoginUnificadoViewModel.preLogin() -&gt; ()"
+                  moduleName = "Authenticator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielchacon/Documents/Projects/Authenticator/Authenticator/LoginUnificadoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  uuid = "0762D968-7997-4EB3-A47C-680BDC1636AD - 705a6f8b7d3a46b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Authenticator.LoginUnificadoViewModel.preLogin() -&gt; ()"
+                  moduleName = "Authenticator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielchacon/Documents/Projects/Authenticator/Authenticator/LoginUnificadoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "75">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D17891FD-916D-4F45-8E84-C558C8CC26FE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Authenticator/LoginUnificadoViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "simulateNetworkRequest(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D17891FD-916D-4F45-8E84-C558C8CC26FE - 70c979c307a02e66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Authenticator.LoginUnificadoViewModel.simulateNetworkRequest(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "Authenticator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielchacon/Documents/Projects/Authenticator/Authenticator/LoginUnificadoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "806">
+               </Location>
+               <Location
+                  uuid = "D17891FD-916D-4F45-8E84-C558C8CC26FE - d7c8af1bcb13fdd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Authenticator.LoginUnificadoViewModel.simulateNetworkRequest(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "Authenticator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielchacon/Documents/Projects/Authenticator/Authenticator/LoginUnificadoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "222">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

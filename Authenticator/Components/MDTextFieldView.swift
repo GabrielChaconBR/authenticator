@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct MDTextFieldView: View {
 
@@ -20,16 +21,19 @@ struct MDTextFieldView: View {
     }
     
     @Binding private var text: String
+    @State private var focused: Bool = false
     @FocusState private var isFocused: Bool
     private var label: String
     private var lineColor: Color
     private var secure: Bool
+    private let mask: Mask?
     
-    internal init(label: String, text: Binding<String>, lineColor: Color = .gray, secure: Bool = false) {
+    internal init(label: String, text: Binding<String>, lineColor: Color = .gray, secure: Bool = false, mask: Mask? = nil) {
         self._text = text
         self.label = label
         self.lineColor = lineColor
         self.secure = secure
+        self.mask = mask
     }
 
     var body: some View {
@@ -43,9 +47,16 @@ struct MDTextFieldView: View {
             if secure {
                 SecureField(String(), text: $text)
                     .focused($isFocused)
+                    .foregroundColor(.black)
             } else {
-                TextField(String(), text: $text)
+                TextField(String(), text: $text, onEditingChanged: { edit in
+                    self.focused = edit
+                })
+                .onReceive(Just(text), perform: { text in
+                    self.text = mask?.formateValue(text) ?? text
+                })
                     .focused($isFocused)
+                    .foregroundColor(.black)
             }
 
             Rectangle()

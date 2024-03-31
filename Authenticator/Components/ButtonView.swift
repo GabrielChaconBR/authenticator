@@ -58,7 +58,6 @@ struct ButtonView: View {
                             .alignmentGuide(.leading) { d in d[.leading] }
                     }.padding(EdgeInsets(top: .zero, leading: Metrics.buttonPadding, bottom: .zero, trailing: Metrics.buttonPadding))
                 }
-                .frame(width: Metrics.witdh, height: Metrics.height)
             }
             .frame(maxWidth: width, maxHeight: height)
             .background(color)
